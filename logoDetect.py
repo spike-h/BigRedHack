@@ -25,7 +25,7 @@ analyze_url = endpoint + "vision/v3.1/analyze"
 image_url = input("Gimme jpg url: ")
 
 headers = {'Ocp-Apim-Subscription-Key': subscription_key}
-params = {'visualFeatures': 'Adult'}
+params = {'visualFeatures': 'Brands'}
 data = {'url': image_url}
 response = requests.post(analyze_url, headers=headers,
                          params=params, json=data)
