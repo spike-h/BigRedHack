@@ -7,7 +7,7 @@ def extractParent(brand):
     soup = BeautifulSoup(req.content, "html.parser")
     try:
         target = soup.find("div", {"class": "BNeawe deIvCb AP7Wnd"})
-        assert len(target.text) <= 6
+        assert target.text.count(' ') <= 6
         return target.text
     except:
         return brand
