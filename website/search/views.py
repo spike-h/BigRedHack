@@ -3,8 +3,11 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
 from .models import brand
 
-class HomePageView(TemplateView):
-    template_name = 'home.html'
+'''class HomePageView(TemplateView):
+    template_name = 'home.html'''
+
+def HomePageView(request):
+    return render(request, 'home.html')
 
 class SearchResultsView(ListView):
     model = brand
