@@ -15,7 +15,6 @@
     <title>Emissions Search</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'home.css'%}">
-
 </head>
 <body>
     <div class="title">
@@ -23,20 +22,9 @@
     </div>
 
     <div class="searchBox">
-        <!-- <form action="{% url 'search_results' %}" method="get"> -->
-        <input class="searchInput" type="text" name="q" placeholder="Search">
-        <button type='submit' class="searchButton" value="OK">
-            <i class="material-icons">
-                search
-            </i>
-        </button>
-        <!-- </form> -->
-    </div>
-    <!-- <div class="searchBox">
-        <form >
-            <input class="whitebox" name="q" type="text" placeholder="Search...">
+        <form class="searchInput" action="{% url 'search_results' %}" method="get">
+            <input name="q" type="text" placeholder="Search...">
         </form>
-    </div> -->
+    </div>
 </body>
 </html>
-
