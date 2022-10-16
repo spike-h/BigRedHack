@@ -6,20 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search Results</title>
   {% load static %}
+
   <link rel="stylesheet" href="{% static 'search_results.css'%}">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  
+  <div class="title">
+    <h1>Company Sustainibiltiy Result: {{ object_list|first }}</h1>
+    <p>
+    {% if not object_list|first %}
+    Sorry, no matching companies were found. Try typing the parent company?
+    {% endif %}
+    </p>
+  </div>
+
+  <div class = "results">
+    <ul>
+      {% for brand in object_list %}
+        <li><span>
+          {{ brand.name }}, {{ brand.emissions }}
+        </span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
 </body>
 </html>
-
-<!-- templates/search_results.html -->
-<h1>Search Results</h1>
-
-<ul>
-  {% for brand in object_list %}
-    <li>
-      {{ brand.name }}, {{ brand.emissions }}
-    </li>
-  {% endfor %}
-</ul>

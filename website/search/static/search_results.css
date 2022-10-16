@@ -1,0 +1,58 @@
+body{
+    background: url("/static/img/onezerobg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.title {
+    position:absolute;
+    text-align: center;
+    top: 8px;
+    left: 50%;
+    transform:  translate(-50%,50%);
+
+    font-size: x-large;
+    font-family: 'Roboto', sans-serif;
+}
+
+.results {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    counter-reset: item;
+    list-style-type: none;
+    line-height: 2.2;
+    margin-left: -40px;
+  }
+  
+  ul li {
+    display: block;
+    position: relative;
+  }
+  
+  ul li span {
+    margin-left: 40px;
+  }
+  
+  ul li:before {
+    content: counter(item) " ";
+    counter-increment: item;
+    color: #7eb4e2;
+    position: absolute;
+    top: 50%;
+    margin-top: -1em;
+    background: #f9dd94;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 2em;
+    font-weight: 700;
+  }
