@@ -1,3 +1,4 @@
+{% load results_extras %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search Results</title>
+  
   {% load static %}
-
   <link rel="stylesheet" href="{% static 'search_results.css'%}">  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +16,15 @@
 </head>
 <body>
   <div class="title">
-    <h1>Company Sustainibiltiy Result: {{ object_list|first }}</h1>
-    <p>
-    {% if not object_list|first %}
-    Sorry, no matching companies were found. Try typing the parent company?
+    <h1>Company Sustainibiltiy Report: {{ object_list|first }}</h1>
+    <p> {% if not object_list|first %}
+    Sorry, no matching companies were found. Try typing the parent company? 
     {% endif %}
     </p>
+  </div>
+
+  <div class = "statistics">
+    <according 
   </div>
 
   <div class = "results">
@@ -33,6 +37,5 @@
       {% endfor %}
     </ul>
   </div>
-
 </body>
 </html>
