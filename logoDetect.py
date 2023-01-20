@@ -16,7 +16,7 @@ from io import BytesIO
 # if 'COMPUTER_VISION_ENDPOINT' in os.environ:
 #     endpoint = os.environ['COMPUTER_VISION_ENDPOINT']
 
-subscription_key = '138925f0920e4218a33dece2f8763e61'
+subscription_key = '' #ah yeah i deleted the key um go put your own or just text me for it
 endpoint = 'https://bigredhackslogodetection.cognitiveservices.azure.com/'
 
 analyze_url = endpoint + "vision/v3.1/analyze"
